@@ -1,0 +1,9 @@
+com\preshine\calc\api\model\ExpressionPojo.class
+com\preshine\calc\api\model\CalcRelation$CalcRel.class
+com\preshine\calc\api\model\DetailBase.class
+com\preshine\calc\api\service\Calculate.class
+com\preshine\calc\api\model\CalcRelation.class
+com\preshine\calc\api\model\CalculateUnit.class
+com\preshine\calc\api\model\FieldComponent.class
+com\preshine\calc\api\model\CalcFieldPojo.class
+com\preshine\calc\api\model\CalculateRule.class
