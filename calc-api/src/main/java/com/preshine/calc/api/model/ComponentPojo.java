@@ -117,10 +117,6 @@ public class ComponentPojo implements Serializable {
 	@TableField(exist = false)
 	private Integer matchType;
 
-	/** 数据获取器对象 */
-	@TableField(exist = false)
-	private DataCollectorPojo dataCollectorPojo;
-
 	@TableField(exist = false)
 	private List<CalcDetailPojo> calcDetailPojos;
 
@@ -182,7 +178,7 @@ public class ComponentPojo implements Serializable {
 	 */
 	public ComponentPojo(String componentCode, String calcRelCode){
 		this.componentCode = componentCode;
-		if(!StringUtils.isEmpty(calcRelCode)){
+		if(calcRelCode != null && !calcRelCode.equals("")){
 			this.calcRelCode = calcRelCode;
 		}
 	}
@@ -298,14 +294,6 @@ public class ComponentPojo implements Serializable {
 
 	}
 
-	public DataCollectorPojo getDataCollectorPojo() {
-		return dataCollectorPojo;
-	}
-
-	public void setDataCollectorPojo(DataCollectorPojo dataCollectorPojo) {
-		this.dataCollectorPojo = dataCollectorPojo;
-	}
-
 	public String getCalcField() {
 		return calcField;
 	}
@@ -413,7 +401,6 @@ public class ComponentPojo implements Serializable {
 				", calcField='" + calcField + '\'' +
 				", transType='" + transType + '\'' +
 				", matchType=" + matchType +
-				", dataCollectorPojo=" + dataCollectorPojo +
 				", calcDetailPojos=" + calcDetailPojos +
 				", fields=" + fields +
 				'}';

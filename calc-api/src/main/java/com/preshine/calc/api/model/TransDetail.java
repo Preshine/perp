@@ -1,9 +1,6 @@
 package com.preshine.calc.api.model;
 
 
-import com.greenpineyu.fel.common.StringUtils;
-import com.refordom.roleplay.corebusiness.transdata.dto.TransBomDto;
-
 import java.util.Date;
 import java.util.List;
 import java.util.Objects;
@@ -72,7 +69,7 @@ public class TransDetail implements DetailBase {
     private Date modTime;
     private String comment;
     private Integer status;
-    private List<TransBomDto> transBomDtos;
+//    private List<TransBomDto> transBomDtos;
 
     private Date calcTime;
 
@@ -95,7 +92,7 @@ public class TransDetail implements DetailBase {
 
     public TransDetail(String transType, String fgCode){
         this.transType = transType;
-        if(!StringUtils.isEmpty(fgCode)){
+        if(fgCode == null || fgCode.equals("")){
             this.fgCode = fgCode;
         }
     }
@@ -172,13 +169,13 @@ public class TransDetail implements DetailBase {
         this.manufactureCost = manufactureCost;
     }
 
-    public List<TransBomDto> getTransBomDtos() {
-        return transBomDtos;
-    }
+//    public List<TransBomDto> getTransBomDtos() {
+//        return transBomDtos;
+//    }
 
-    public void setTransBomDtos(List<TransBomDto> transBomDtos) {
-        this.transBomDtos = transBomDtos;
-    }
+//    public void setTransBomDtos(List<TransBomDto> transBomDtos) {
+//        this.transBomDtos = transBomDtos;
+//    }
 
     public Double getExAmount() {
         return exAmount;
@@ -655,7 +652,7 @@ public class TransDetail implements DetailBase {
                 ", modTime=" + modTime +
                 ", comment='" + comment + '\'' +
                 ", status=" + status +
-                ", transBomDtos=" + transBomDtos +
+//                ", transBomDtos=" + transBomDtos +
                 ", calcTime=" + calcTime +
                 ", componentPojos=" + componentPojos +
                 ", tradingInTime=" + tradingInTime +

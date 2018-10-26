@@ -6,6 +6,7 @@ import com.baomidou.mybatisplus.annotations.TableName;
 import com.baomidou.mybatisplus.enums.IdType;
 
 import java.io.Serializable;
+import java.util.List;
 
 /**
  *
@@ -30,7 +31,7 @@ public class ComFieldExpRelPojo implements Serializable {
 	@TableField(value = "CALC_FIELD_ID")
 	private String calcFieldId;
 
-	/** 字段组，这是第二版本新添加字段，在同一个流程下两个不同明细添加一模一样计算组件时区分开其拥有的字段 */
+	/**  字段组，这是第二版本新添加字段，在同一个流程下两个不同明细添加一模一样计算组件时区分开其拥有的字段 */
 	@TableField(value = "FG_CODE")
 	private String fgCode;
 	

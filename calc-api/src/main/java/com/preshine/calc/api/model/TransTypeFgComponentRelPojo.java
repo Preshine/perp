@@ -86,7 +86,7 @@ public class TransTypeFgComponentRelPojo implements Serializable {
 
 	public TransTypeFgComponentRelPojo(String transType, String fgCode){
 		this.transType = transType;
-		if(!StringUtils.isEmpty(fgCode)){
+		if(fgCode != null && !fgCode.equals("")){
 			this.fgCode = fgCode;
 		}
 	}
